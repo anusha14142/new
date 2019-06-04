@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    <style>
+        .box{
+            height: 400px;
+            width: 400px;
+            background-color: red;
+transition: all 5s;
+border-top-left-radius: 50%;
+border-bottom-right-radius: 50%;
+        }
+        @keyframe how r u{
+            0%{
+                transform:rotate(0deg);
+            }
+            100%{
+                transform:rotate(360deg);
+            }
+        }
+        .move{
+            margin-left: 400px;
+margin-bottom: 300px;
+        }
+    </style>
+</head>
+<body>
+    <div id="sample1">welcome to my first tag</div>
+    
+</body>
+<script>
+    var elm=document.getElementById("sample1");
+    console.log(elm);
+    // i can write csss(inline,apply class)
+    elm.className="box";
+    
+elm.style.lineHeight="80px";
+elm.style.textAlign="center";
+// get 
+var data=elm.innerHTML;
+console.log(data);
+    // set data
+    elm.innerHTML="<h1>manda</h1><h2>anusha</h2>";
+    // find children
+    var child=elm.children;
+    console.log(child);
+    // write event (click .hover)
+    elm.onmouseover=function(){
+        this.style.backgroundColor="green";
+    }
+        elm.onmouseout=function(){
+        this.style.backgroundColor="red";
+        
+    }
+    elm.onclick=function(){
+        this.className="box move";
+    }
+    elm.ondblclick=function(){
+        this.className="box";
+    }
+
+    
+</script>
+</html>
